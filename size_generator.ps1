@@ -23,12 +23,11 @@ $data = [IO.File]::ReadAllText($var)
 $users += $data
 }
 
-$idarray = $id.Split([string[]]"`r`n", [StringSplitOptions]::None)
-$measurementsarray = $measurements.Split([string[]]"`r`n", [StringSplitOptions]::None)
-$sizearray = $size.Split([string[]]"`r`n", [StringSplitOptions]::None)
-$userarray = $users.Split([string[]]"`r`n", [StringSplitOptions]::None)
-$labelsarray = $labels.Split([string[]]"`r`n", [StringSplitOptions]::None)
-
+$idarray = $id.Split(@("`r`n", "`r", "`n"), [StringSplitOptions]::None)
+$measurementsarray = $measurements.Split(@("`r`n", "`r", "`n"), [StringSplitOptions]::None)
+$sizearray = $size.Split(@("`r`n", "`r", "`n"), [StringSplitOptions]::None)
+$userarray = $users.Split(@("`r`n", "`r", "`n"), [StringSplitOptions]::None)
+$labelsarray = $labels.Split(@("`r`n", "`r", "`n"), [StringSplitOptions]::None)
 
 
 $measurementslist = @((0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0),(0))
